@@ -2,8 +2,8 @@ import { create } from "zustand";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-// const API_URL = "https://vailovent.my.id/api/v1/products";
-const API_URL = "http://localhost:8000/api/v1/products";
+const API_URL = "https://api-vailovent.vercel.app/api/v1/products";
+// const API_URL = "http://localhost:8000/api/v1/products";
 
 export const useProductStore = create((set, get) => ({
   products: [],
