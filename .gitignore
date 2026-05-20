@@ -27,4 +27,4 @@ dist-ssr
 *.sw?
 
 # Ignore frontend
-FE/
+frontend/
