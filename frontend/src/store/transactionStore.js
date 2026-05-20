@@ -2,12 +2,12 @@ import { create } from "zustand";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const API_URL = "https://vailovent.my.id/api/v1/transactions";
-const MIDTRANS_URL =
-  "https://vailovent.my.id/api/v1/midtrans/create-transaction";
+// const API_URL = "https://vailovent.my.id/api/v1/transactions";
+// const MIDTRANS_URL =
+//   "https://vailovent.my.id/api/v1/midtrans/create-transaction";
 
-// const API_URL = "http://localhost:8000/api/v1/transactions";
-// const MIDTRANS_URL = "http://localhost:8000/api/v1/midtrans/create-transaction";
+const API_URL = "http://localhost:8000/api/v1/transactions";
+const MIDTRANS_URL = "http://localhost:8000/api/v1/midtrans/create-transaction";
 
 export const useTransactionStore = create((set, get) => ({
   table_code: "",
@@ -36,7 +36,7 @@ export const useTransactionStore = create((set, get) => ({
         products.length === 0
       ) {
         throw new Error(
-          "Please complete all required fields before proceeding."
+          "Please complete all required fields before proceeding.",
         );
       }
 

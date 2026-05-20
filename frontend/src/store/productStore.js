@@ -2,8 +2,8 @@ import { create } from "zustand";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const API_URL = "https://vailovent.my.id/api/v1/products";
-// const API_URL = "http://localhost:8000/api/v1/products";
+// const API_URL = "https://vailovent.my.id/api/v1/products";
+const API_URL = "http://localhost:8000/api/v1/products";
 
 export const useProductStore = create((set, get) => ({
   products: [],
@@ -17,7 +17,7 @@ export const useProductStore = create((set, get) => ({
 
       if (!name || !description || !stock || !price || !file) {
         throw new Error(
-          "Please complete all required fields before proceeding!"
+          "Please complete all required fields before proceeding!",
         );
       }
 
@@ -84,7 +84,7 @@ export const useProductStore = create((set, get) => ({
           headers: {
             "Content-Type": "multipart/form-data",
           },
-        }
+        },
       );
 
       const updatedProduct = response?.data?.data;
@@ -94,7 +94,7 @@ export const useProductStore = create((set, get) => ({
 
       set((state) => ({
         products: state.products.map((p) =>
-          p._id === product_id ? updatedProduct : p
+          p._id === product_id ? updatedProduct : p,
         ),
         isLoading: false,
       }));
@@ -125,7 +125,7 @@ export const useProductStore = create((set, get) => ({
       const response = await axios.delete(`${API_URL}/delete/${product_id}`);
 
       const filteredProducts = (get().products || []).filter(
-        (product) => product._id !== product_id
+        (product) => product._id !== product_id,
       );
 
       set({

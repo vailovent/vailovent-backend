@@ -26,7 +26,7 @@ export default function Navbar() {
       <div className="container mx-auto px-8 py-4 flex justify-between items-center">
         <div className="flex items-center space-x-6">
           <img
-            src="https://ta-project-soundbox-payment.s3.ap-southeast-2.amazonaws.com/vailovent-logo.png"
+            src="https://ta-project-soundbox-payment-180294196054-us-east-1-an.s3.us-east-1.amazonaws.com/vailovent-logo-black"
             alt="Logo"
             className="w-12 h-12 rounded-full border-2 border-gray-500"
           />
